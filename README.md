@@ -35,21 +35,11 @@ This paper provides a more detailed description of DESSABNeT and also shows exam
 DESSABNeT has the following features:
 
 •	DESSABNeT can accurately model a wide range of social restrictions and also the easing or reversal of restrictions. 
-Examples of modelled restrictions are: 
-
-o	working from home, 
-
-o	restricting social visits by friends, 
-
-o	restricting either large (around 500 people or more), medium (between 20 and 500 people) or small (up to 20 people) public or private gatherings, 
-
-o	restricting or modelling changes in public transport 
-
-o	and even the wearing of masks 
+Examples of modelled restrictions are: Working from home, restricting social visits by friends, restricting either large (around 500 people or more), medium (between 20 and 500 people) or small (up to 20 people) public or private gatherings, restricting or modelling changes in public transport and even the wearing of masks 
 
 •	It can also model scenarios such as COVID-19 vaccination scenarios to determine herd immunity, for example
 
-•	The model can fluidly transitioning between social restriction phases within the same simulation 
+•	The model can fluidly transition between social restriction phases within the same simulation 
 
 •	Because of its granularity (modelling the activities of individual people or agents) our system can work accurately 
 in low prevalence settings 
@@ -87,22 +77,38 @@ Run DESSABNeT Population Setup first: All files are located in the following fol
 
 DESSABNET_Population_Setup_Final_2021
 
-### Step 1: Open Stapelberg_et_al_DESSABNeT_Setup_Demographic_Data_Sydney.m
+### Step 1: 
+
+Open: 
+
+Stapelberg_et_al_DESSABNeT_Setup_Demographic_Data_Sydney.m
 
 Set values for the demographic variables, e.g. population size. In the current file these variables all have values based on demographic data for Sydney. We recommend that to rapidly trial the software, a small Population value such as 10,000 agents should be entered. 
 
-### Step 2: Open and run the file Stapelberg_et_al_DESSABNeT_Population_Setup_Master_Sydney.m 
+### Step 2: 
+
+Open and run the file Stapelberg_et_al_DESSABNeT_Population_Setup_Master_Sydney.m 
+
 This is a master file that will automatically run the other modules (.m files in the same folder) as required.
 
-### Step 3: DESSABNeT Population Setup generates setup files for each city/location as an output:
+### Step 3: 
+
+DESSABNeT Population Setup generates setup files for each city/location as an output:
+
 Examples of output files for Sydney are as follows, using a trial population of 10,000 agents:
 
 2021_DESSABNeT_Population_Setup_Global_10000_v7_3.mat
+
 2021_DESSABNeT_Population_Indexed_Variables_Phase1_10000_v7_3.mat
+
 2021_DESSABNeT_Population_Indexed_Variables_Phase3_10000_v7_3.mat
+
 2021_DESSABNeT_Population_Indexed_Variables_Phase4_10000_v7_3.mat
+
 2021_DESSABNeT_Person_Profile_Phase1_10000_v7_3.mat
+
 2021_DESSABNeT_Person_Profile_Phase3_10000_v7_3.mat
+
 2021_DESSABNeT_Person_Profile_Phase4_10000_v7_3.mat
 
 These are Matlab files which save array and variable values (see https://au.mathworks.com/help/matlab/import_export/load-parts-of-variables-from-mat-files.html)
@@ -110,25 +116,37 @@ These files should be placed into the DESSABNeT Dynamic Model folder to run a Dy
 
 DESSABNET_Dynamic_Model_Final_2021
 
-### Step 4: Now Run DESSABNeT Dynamic Model. In the folder DESSABNET_Dynamic_Model_Final_2021, open the following file in Matlab: 
+### Step 4: 
+
+Now Run DESSABNeT Dynamic Model. In the folder DESSABNET_Dynamic_Model_Final_2021, open the following file in Matlab: 
+
 Stapelberg_et_al_DESSABNeT_Dynamic_Master_Cases_Load_Sydney.m
 This is again a master file which will run the other modules in the same folder.
 
-### Step 5: Set up the number of runs required. If you wish to lengthen the number of days that the simulation will run for, additional data for each day should be added to the file:
+### Step 5: 
+
+Set up the number of runs required. If you wish to lengthen the number of days that the simulation will run for, additional data for each day should be added to the file:
 
 covid_19_interstate_overseas_case_numbers_Sydney.xlsx
 
 You can set the first day for each change in social restrictions which you wish to add
 
-### Step 6: Run Stapelberg_et_al_DESSABNeT_Dynamic_Master_Cases_Load_Sydney.m
+### Step 6: 
+
+Run Stapelberg_et_al_DESSABNeT_Dynamic_Master_Cases_Load_Sydney.m
 
 DESSABNeT will output the following data files:
 
 DESSABNeT__Sydney_31-Mar-2021_1_10000_All_Epi_Daily_Outputs_Table.xlsx
+
 DESSABNeT__Sydney_31-Mar-2021_1_10000_Mean_Daily_Outputs_Table.xlsx
+
 DESSABNeT__Sydney_31-Mar-2021_1_10000_Median_Daily_Outputs_Table.xlsx
+
 DESSABNeT__Sydney_31-Mar-2021_1_10000_2p5_Percentile_Daily_Outputs_Table.xlsx
+
 DESSABNeT__Sydney_31-Mar-2021_1_10000_97p5_Percentile_Daily_Outputs_Table.xlsx
+
 DESSABNeT__Sydney_31-Mar-2021_1_10000_Container_Data_Table.xlsx
 
 ### Step 7:
