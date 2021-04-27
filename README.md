@@ -68,6 +68,7 @@ The code is provided as .m Matlab code files, which will run, using Matlab, on a
 ## Configuration Setup
 	
 Matlab .m files can be loaded directly into Matlab and run.
+No additional libraries or Matlab Toolboxes are required.
 
 ## Usage
 	
@@ -86,14 +87,14 @@ Run DESSABNeT Population Setup first: All files are located in the following fol
 
 DESSABNET_Population_Setup_Final_2021
 
-Step 1: Open Stapelberg_et_al_DESSABNeT_Setup_Demographic_Data_Sydney.m
+### Step 1: Open Stapelberg_et_al_DESSABNeT_Setup_Demographic_Data_Sydney.m
 
 Set values for the demographic variables, e.g. population size. In the current file these variables all have values based on demographic data for Sydney. We recommend that to rapidly trial the software, a small Population value such as 10,000 agents should be entered. 
 
-Step 2: Open and run the file Stapelberg_et_al_DESSABNeT_Population_Setup_Master_Sydney.m 
+### Step 2: Open and run the file Stapelberg_et_al_DESSABNeT_Population_Setup_Master_Sydney.m 
 This is a master file that will automatically run the other modules (.m files in the same folder) as required.
 
-Step 3: DESSABNeT Population Setup generates setup files for each city/location as an output:
+### Step 3: DESSABNeT Population Setup generates setup files for each city/location as an output:
 Examples of output files for Sydney are as follows, using a trial population of 10,000 agents:
 
 2021_DESSABNeT_Population_Setup_Global_10000_v7_3.mat
@@ -109,17 +110,17 @@ These files should be placed into the DESSABNeT Dynamic Model folder to run a Dy
 
 DESSABNET_Dynamic_Model_Final_2021
 
-Step 4: Now Run DESSABNeT Dynamic Model. In the folder DESSABNET_Dynamic_Model_Final_2021, open the following file in Matlab: 
+### Step 4: Now Run DESSABNeT Dynamic Model. In the folder DESSABNET_Dynamic_Model_Final_2021, open the following file in Matlab: 
 Stapelberg_et_al_DESSABNeT_Dynamic_Master_Cases_Load_Sydney.m
 This is again a master file which will run the other modules in the same folder.
 
-Step 5: Set up the number of runs required. If you wish to lengthen the number of days that the simulation will run for, additional data for each day should be added to the file:
+### Step 5: Set up the number of runs required. If you wish to lengthen the number of days that the simulation will run for, additional data for each day should be added to the file:
 
 covid_19_interstate_overseas_case_numbers_Sydney.xlsx
 
 You can set the first day for each change in social restrictions which you wish to add
 
-Step 6: Run Stapelberg_et_al_DESSABNeT_Dynamic_Master_Cases_Load_Sydney.m
+### Step 6: Run Stapelberg_et_al_DESSABNeT_Dynamic_Master_Cases_Load_Sydney.m
 
 DESSABNeT will output the following data files:
 
@@ -130,11 +131,13 @@ DESSABNeT__Sydney_31-Mar-2021_1_10000_2p5_Percentile_Daily_Outputs_Table.xlsx
 DESSABNeT__Sydney_31-Mar-2021_1_10000_97p5_Percentile_Daily_Outputs_Table.xlsx
 DESSABNeT__Sydney_31-Mar-2021_1_10000_Container_Data_Table.xlsx
 
+### Step 7:
+
 Finally, the file:
 
 Stapelberg_et_al_DESSABNeT_Dynamic_R0_Matrix_Calc_Sydney5
 
-can be run as a stand-alone program. It will calculate the WAIFU Matrix and R0 for the given city and the current restrictions in place.
+can be run as a stand-alone program. It will calculate the Who Acquired Iinfection From Whom Matrix and R0 for the given city and the current restrictions in place.
 
 
 ## Collaborators
